@@ -9,12 +9,14 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
         <!-- Linking external CSS stylesheet -->
         <style>
+             
              body {
             font-family: 'Roboto', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
         }
+       
             h1{
                 text-align: center;
                 font-weight: bold;
@@ -61,7 +63,7 @@
  #social {
     text-align: center;
     margin-top: 10px;
-    transform: translateY(100%);
+    transform: translateY(-19%);
 }
 
 .social-icons {
@@ -86,9 +88,30 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px;
-    transform: translateY(110%); 
+    transform: translateY(-13%); 
 }
-
+#countdown-container {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5px;
+            background-color: #8ab323;
+            border: 1px solid #ae4646;
+            border-radius: 5px;
+            padding: 5px;
+            transform: translate(10%, -500%);
+        }
+        
+        #clock {
+            font-size: 16px;
+            color: #333;
+            
+        }
+        
+        #clock span {
+            display: inline-block;
+            margin: 0 10px;
+        }
         </style>
     </head>
     <body>
@@ -128,6 +151,16 @@ footer {
         </div>
         <button type = "submit"> Submit</button>
         </form>
+        <section id="countdown-container">
+            <div id="countdown-clock">
+            <h2>Time Left to Make Reservation:</h2>
+            <div id="clock">
+                <span id="days">00</span> Days
+                <span id="hours">00</span> Hours
+                <span id="minutes">00</span> Minutes
+                <span id="seconds">00</span> Seconds
+            </div>
+        </section>
         <section id="social">
             <div> 
                 <ul class="social-icons">
@@ -145,23 +178,53 @@ footer {
     </footer>
     <!-- JavaScript code -->
     <script>
-        // JavaScript to handle form submission
-        document.getElementById('reservation-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form submission
+        // Function to update the countdown clock
+        function updateClock() {
+            var endDate = new Date("2024-12-31T23:59:59"); // Change this to your desired reservation deadline
+            var currentDate = new Date();
+            var timeLeft = endDate - currentDate;
 
-            // Get form data
-            var formData = new FormData(this);
+            if (timeLeft < 0) {
+                clearInterval(timeInterval);
+                document.getElementById('clock').innerHTML = "Reservation deadline passed!";
+                return;
+            }
+
+            var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+        }
+
+        // Update the clock immediately to avoid initial delay
+        updateClock();
+
+        // Set up a timer to update the clock every second
+        var timeInterval = setInterval(updateClock, 1000);
+
+        // JavaScript to handle form submission
+        document.querySelector('.reserve-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get form data
+        var formData = new FormData(this);
+
 
             // Optional: You can validate form data here before submission
             // For example, you can check if required fields are filled
 
             // Simulate form submission
-            alert('Form submitted successfully!\n\nName: ' + formData.get('name') +
-                  '\nParty Size: ' + formData.get('party') +
-                  '\nDate and Time: ' + formData.get('reserve') +
-                  '\nPhone Number: ' + formData.get('phonenumber') +
-                  '\nEmail: ' + formData.get('email'));
-        });
+            alert('You have booked your reservation!\n\nName: ' + formData.get('name') +
+            '\nParty Size: ' + formData.get('party') +
+            '\nDate and Time: ' + formData.get('reserve') +
+            '\nPhone Number: ' + formData.get('phonenumber') +
+            '\nEmail: ' + formData.get('email'));
+    });
     </script>
     </body>
     </html>
