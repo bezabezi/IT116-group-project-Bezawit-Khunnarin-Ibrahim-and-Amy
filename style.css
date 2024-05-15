@@ -3,11 +3,12 @@ body {
     font-size: 16px;
     margin: 0;
     padding: 0;
+    background-color:  #c48a8a;
 }
 
 /* Header styles */
 header {
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.5);
     color:white;
     padding: 5px;
 }
@@ -46,18 +47,18 @@ main {
 }
 
 #welcome h1 {
-    color:rgb(30, 95, 193); /* Change text color to white */
+    color:rgb(190, 60, 60); /* Change text color to white */
     font-size: 28px;
 }
 
 #welcome p {
-    color: rgb(30,95,193); /* Change text color to white */
+    color: rgb(186, 62, 62); /* Change text color to white */
     font-size: 18px;
 }
 
 .btn {
     display: inline-block;
-    background-color: #333;
+    background-color: #f60101;
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
@@ -67,9 +68,55 @@ main {
 }
 
 .btn:hover {
-    background-color: #555;
+    background-color: #272323;
 }
-
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+.info-left {
+    width: 20%; 
+    background-color: #794b4b;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+#about-info .info-right {
+    float: right;
+    width: 50%;
+    min-height: 100%;
+    }
+    #about-info .info-right img {
+    display: block;
+    margin: auto;
+    width: 15%;
+    border-radius: 50%;
+    transform: translate(540%, -356%);
+    }
+    #about-info .info-left {
+    float: right;
+    width: 50%;
+    min-height: 100%;
+    transform: translate(40%, -120%);
+    }
+    .Reserve-left{
+        width: 45%;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+    
+    .Reserve-left {
+        background-color: #794b4b;
+    }
+    
+    .Reserve-right {
+        background-color: #fff;
+    }
 /* Social media section styles */
 #social {
     text-align: center;
@@ -104,9 +151,10 @@ footer {
 
 /* Background image for home page */
 body.home {
-    background-image: url('b1.jpg');
+    background-image: url('b3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    height: 450px;
 }
 
 

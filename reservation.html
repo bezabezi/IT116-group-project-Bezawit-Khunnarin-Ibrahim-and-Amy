@@ -1,230 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Mexican Restaurant</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="style.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
-        <!-- Linking external CSS stylesheet -->
-        <style>
-             
-             body {
+<head>
+    <title>Mexican Restaurant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
+    <style>
+        body {
             font-family: 'Roboto', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
         }
-       
-            h1{
-                text-align: center;
-                font-weight: bold;
-                color: rgb(9, 98, 253)
-            }
-            .reserve-form {
+
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            color: rgb(9, 98, 253);
+            transform: translateY(-10%)
+        }
+
+        .reserve-form {
             width: 100%;
             max-width: 400px;
             margin-top: 100px;
             display: flex;
             flex-direction: column;
             font-weight: bold;
-            transform: translate(0%, 6%);
+            transform: translate(0%, -1%);
             margin: 0 auto;
             border-radius: 5px;
-            border: 1px solid #ccc; /* Added border style */
-            padding: 20px; /* Added padding */
+            border: 1px solid #ccc;
+            padding: 20px;
             background-color: white;
         }
-            .reserve-form input[type="text"],
+
+        .reserve-form input[type="text"],
         .reserve-form input[type="email"],
         .reserve-form input[type="number"],
         .reserve-form input[type="datetime-local"],
         .reserve-form input[type="tel"],
         .reserve-form textarea {
-          width: 100%;
-          padding: 10px;
-          margin: 8px 0;
-          border: 1px solid #dabfbf;
-          border-radius: 4px;
-          box-sizing: border-box; /* Ensures padding and border are included in width */
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #dabfbf;
+            border-radius: 4px;
+            box-sizing: border-box;
         }
-            button{
-                background-color: #4caf50;
-                color: white;
-                cursor: pointer;
-                border: none;
-                padding: 12px 20px;
-                border-radius: 4px;
-                width: 100%;
-                max-width: 100px;
-                transform: translateY(10%);
-            }
- #social {
-    text-align: center;
-    margin-top: 10px;
-    transform: translateY(-19%);
-}
 
-.social-icons {
-    list-style-type: none;
-    
-    padding: 0;
-}
-
-.social-icons li {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.social-icons li a {
-    color: rgb(12, 12, 12);
-    font-size: 24px;
-    text-decoration: none;
-}
-footer {
-    bottom: 0%;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    transform: translateY(-13%); 
-}
-#countdown-container {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 5px;
-            background-color: #8ab323;
-            border: 1px solid #ae4646;
-            border-radius: 5px;
-            padding: 5px;
-            transform: translate(10%, -500%);
+        button {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 100px;
+            transform: translateY(10%);
         }
-        
-        #clock {
-            font-size: 16px;
-            color: #333;
-            
+
+        #social {
+            text-align: center;
+            margin-top: 10px;
+            transform: translateY(10%)
         }
-        
-        #clock span {
+
+        .social-icons {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .social-icons li {
             display: inline-block;
-            margin: 0 10px;
+            margin-right: 10px;
         }
-        </style>
-    </head>
-    <body>
-        <!-- Header section -->
-        <header>
+
+        .social-icons li a {
+            color: rgb(12, 12, 12);
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        footer {
+            bottom: 0%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        body{
+            background: #282e3a;
             
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="Reservation.html">Reservation</a></li>
-                    <li><a href="aboutus.html">About us</a></li>
-                    <li><a href="contactus.html">Contact us</a></li>
-                </ul>
-            </nav>
-        </header>
-        <h1>Book Your Reservation Here.</h1>
-    <form class = "reserve-form">
-        <div><label for ="name">Name</label>
-        <input type = "text" id = "name" name = "name">
-        </div>
-        <div>
-        <label for ="party">Party Size</label>
-        <input type ="number" id ="party" name = "party" min = "1" max = "7">
-        </div>
-        <div>
-        <label for = "reserve">Date and Time</label>
-        <input type = "datetime-local" id ="reserve" name = "reserve" min = "11:00" max = "23:00">
-        </div>
-        <div>
-        <label for = "phonenumber">Phone Number</label>
-        <input type = "tel" id = "phonenumber" name = "phonenumber">
-        </div>
-        <div>
-        <label for = "email">Email</label>
-        <input type = "email" id = "email" name = "email">
-        </div>
-        <button type = "submit"> Submit</button>
-        </form>
-        <section id="countdown-container">
-            <div id="countdown-clock">
-            <h2>Time Left to Make Reservation:</h2>
-            <div id="clock">
-                <span id="days">00</span> Days
-                <span id="hours">00</span> Hours
-                <span id="minutes">00</span> Minutes
-                <span id="seconds">00</span> Seconds
-            </div>
-        </section>
-        <section id="social">
-            <div> 
-                <ul class="social-icons">
-                    <li><a href="https://twitter.com" target="_blank"><i class= "fab fa-twitter"></i></a></li>
-                    <li><a href="https://instagram.com" target="_blank"><i class= "fab fa-instagram"></i></a></li>
-                    <li><a href="https://facebook.com" target="_blank"><i class= "fab fa-facebook"></i></a></li>
-                    <li><a href="https://whatsapp.com" target="_blank"><i class= "fab fa-whatsapp"></i></a></li>
-                </ul>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <!-- Footer section -->
-        <p>&copy; 2024 CABO mexican restaurant. All rights reserved!</p>
-    </footer>
-    <!-- JavaScript code -->
-    <script>
-        // Function to update the countdown clock
-        function updateClock() {
-            var endDate = new Date("2024-12-31T23:59:59"); // Change this to your desired reservation deadline
-            var currentDate = new Date();
-            var timeLeft = endDate - currentDate;
-
-            if (timeLeft < 0) {
-                clearInterval(timeInterval);
-                document.getElementById('clock').innerHTML = "Reservation deadline passed!";
-                return;
-            }
-
-            var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-            document.getElementById("days").innerText = days < 10 ? "0" + days : days;
-            document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
-            document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
-            document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+        }
+        h2{
+            color: #fff;
+            text-align: center;
+            font-size: 12px;
+            letter-spacing: 10px;
+        }
+        #del-countdown{
+            position: fixed;
+            top: 70px; /* Adjust top positioning as needed */
+            left: 20px; /* Adjust left positioning as needed */
+            width: 250px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        #clock span{
+            float: left;
+            text-align: center;
+            font-size: 14px;
+            margin: 0 2.5%;
+            color: #fff;
+            padding: 10px;
+            width: 25%;
+            border-radius: 20px;
+            box-sizing: border-box;
+        }
+   
+#clock span:nth-child(1){
+  background: #fa5559;
+}
+#clock span:nth-child(2){
+  background: #26c2b9;
+}
+#clock span:nth-child(3){
+  background: #f6bc58;
+}
+#clock span:nth-child(4){
+  background: #2dcb74;
+}
+        #clock:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #units span{
+            float: left;
+            width: 25%;
+            text-align: center;
+            margin-top: 10px;
+            color: #ddd;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 2px;
         }
 
-        // Update the clock immediately to avoid initial delay
-        updateClock();
+        span.turn{
+            animation: turn 0.7s ease forwards;
+        }
 
-        // Set up a timer to update the clock every second
-        var timeInterval = setInterval(updateClock, 1000);
+        @keyframes turn{
+            0%{transform: rotateX(0deg)}
+            100%{transform: rotateX(360deg)}
+        }
+    </style>
+</head>
+<body>
+<!-- Header section -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="Reservation.html">Reservation</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="contactus.html">Contact us</a></li>
+        </ul>
+    </nav>
+</header>
+<h1>Book Your Reservation Here.</h1>
+<form class="reserve-form" id="reservation-form">
+    <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+    </div>
+    <div>
+        <label for="party">Party Size</label>
+        <input type="number" id="party" name="party" min="1" max="7">
+    </div>
+    <div>
+        <label for="reserve">Date and Time</label>
+        <input type="datetime-local" id="reserve" name="reserve" min="11:00" max="23:00">
+    </div>
+    <div>
+        <label for="phonenumber">Phone Number</label>
+        <input type="tel" id="phonenumber" name="phonenumber">
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+    </div>
+    <button type="submit">Submit</button>
+</form>
+<div id="del-countdown">
+    <h2>Time Left For Reservation.</h2>
+    <div id="clock"></div>
+    <div id="units">
+      
+    </div>
+</div>
+<section id="social">
+    <div>
+        <ul class="social-icons">
+            <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+        </ul>
+    </div>
+</section>
+</main>
+<footer>
+    <!-- Footer section -->
+    <p>&copy; 2024 CABO mexican restaurant. All rights reserved!</p>
+</footer>
+<!-- JavaScript code -->
+<script>
+    function updateTimer(deadline){
+  var time = deadline - new Date();
+  return {
+    'days': Math.floor( time/(1000*60*60*24) ),
+    'hours': Math.floor( (time/(1000*60*60)) % 24 ),
+    'minutes': Math.floor( (time/1000/60) % 60 ),
+    'seconds': Math.floor( (time/1000) % 60 ),
+    'total' : time
+  };
+}
 
-        // JavaScript to handle form submission
-        document.querySelector('.reserve-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form submission
+function animateClock(span){
+  span.className = "turn";
+  setTimeout(function(){
+    span.className = "";
+  },700);
+}
 
-        // Get form data
-        var formData = new FormData(this);
+function startTimer(id, deadline){
+  var timerInterval = setInterval(function(){
+    var clock = document.getElementById(id);
+    var timer = updateTimer(deadline);
 
+    clock.innerHTML = '<span>' + timer.days + '</span>'
+                    + '<span>' + timer.hours + '</span>'
+                    + '<span>' + timer.minutes + '</span>'
+                    + '<span>' + timer.seconds + '</span>';
 
-            // Optional: You can validate form data here before submission
-            // For example, you can check if required fields are filled
+    //animations
+    var spans = clock.getElementsByTagName("span");
+    animateClock(spans[3]);
+    if(timer.seconds == 59) animateClock(spans[2]);
+    if(timer.minutes == 59 && timer.seconds == 59) animateClock(spans[1]);
+    if(timer.hours == 23 && timer.minutes == 59 && timer.seconds == 59) animateClock(spans[0]);
 
-            // Simulate form submission
-            alert('You have booked your reservation!\n\nName: ' + formData.get('name') +
-            '\nParty Size: ' + formData.get('party') +
-            '\nDate and Time: ' + formData.get('reserve') +
-            '\nPhone Number: ' + formData.get('phonenumber') +
-            '\nEmail: ' + formData.get('email'));
-    });
-    </script>
-    </body>
-    </html>
+    //check for end of timer
+    if(timer.total < 1){
+      clearInterval(timerInterval);
+      clock.innerHTML = '<span>0</span><span>0</span><span>0</span><span>0</span>';
+    }
+  }, 1000);
+}
+
+window.onload = function(){
+  var deadline = new Date();
+  deadline.setMinutes(deadline.getMinutes() + 20); // Set deadline 20 minutes from now
+  startTimer("clock", deadline);
+};
+
+// Form submission handling
+document.getElementById("reservation-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+    alert("You have successfully booked your reservation!"); // Show success message
+});
+</script>
+</body>
+</html>
