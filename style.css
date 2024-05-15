@@ -130,7 +130,7 @@ main {
 #social {
     text-align: center;
     padding: 20px 0;
-    transform: translateY(-560%);
+    transform: translateY(-10%);
     
 }
 
@@ -166,7 +166,7 @@ footer {
     left: 10px; /* Adjust the distance from the left as needed */
     width: 600px; /* Adjust the width of the image */
     height: 600px; /* Maintain aspect ratio */
-    border-radius: 250px;
+    border-radius: 120px;
     margin-bottom: 20px; /* Adjust the margin bottom to reduce the gap */
     transform: translateY(-50%); /* Move the image upward by 50% of its own height */
 }
@@ -178,7 +178,7 @@ body.home {
     background-image: url('b3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 550px;
+    height: 750px;
 }
 
 
