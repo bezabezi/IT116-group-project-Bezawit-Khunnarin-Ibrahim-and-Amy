@@ -1,10 +1,14 @@
-body {
+/* Background image for home page */
+body.home {
+    background-image: url('b3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1250px;
     font-family: Arial, sans-serif;
     font-size: 16px;
     margin: 0;
     padding: 0;
     background-color:  #c48a8a;
-     
 }
 
 /* Header styles */
@@ -109,80 +113,7 @@ main {
         font-size:20px;
         color: rgb(225, 20, 20);
     }
-    .Reserve-left{
-        width: 55%;
-        padding: 2px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        border-radius: 25px;
-        margin-bottom: 20px;
-        height: 10%;
-        transform:translate(41%, -100%);
-       
-            
-    }
-    
-    .Reserve-left {
-        background-color: #794b4b;
-    }
-    
-    
-/* Social media section styles */
-#social {
-    text-align: center;
-    padding: 20px 0;
-    transform: translateY(-10%);
-    
-}
-
-.social-icons {
-    list-style-type: none;
-    
-}
-
-.social-icons li {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.social-icons li a {
-    color: rgb(12, 12, 12);
-    font-size: 24px;
-    text-decoration: none;
-    
-}
-
-/* Footer styles */
-footer {
-    bottom: 0%;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    
-   
-}
-.bottom-left-image {
-    bottom: 10px; /* Adjust the distance from the bottom as needed */
-    left: 10px; /* Adjust the distance from the left as needed */
-    width: 600px; /* Adjust the width of the image */
-    height: 600px; /* Maintain aspect ratio */
-    border-radius: 120px;
-    margin-bottom: 20px; /* Adjust the margin bottom to reduce the gap */
-    transform: translateY(-50%); /* Move the image upward by 50% of its own height */
-}
-
-
-
-/* Background image for home page */
-body.home {
-    background-image: url('b3.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 750px;
-}
-
-
-* Video section styles */
+    * Video section styles */
 #video {
     position: relative;
     width: 40%;
@@ -212,10 +143,46 @@ body.home {
 .animation {
     animation: slidein 1s ease forwards; /* Apply animation to the element */
 }
+#social {
+    text-align: center;
+    padding: 20px 0;
+    transform: translateY(-10%);
+    
+}
 
+.social-icons {
+    list-style-type: none;
+    
+}
 
-.background{
-    background-color: rgb(218, 215, 228);
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons li a {
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    text-decoration: none;
+    
+}
+
+/* Footer styles */
+footer {
+    bottom: 0%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    
+   
+}
+body.animation {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color:  #c48a8a;
 }
 
 .menu-container {
