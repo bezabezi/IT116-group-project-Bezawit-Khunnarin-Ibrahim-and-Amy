@@ -1,9 +1,9 @@
 /* Background image for home page */
 body.home {
-    background-image: url('b3.jpg');
+    background-image: url('b9.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 1250px;
+    height: 1300px;
     font-family: Arial, sans-serif;
     font-size: 16px;
     margin: 0;
@@ -53,13 +53,13 @@ main {
 }
 
 #welcome h1 {
-    color:rgb(190, 60, 60); /* Change text color to white */
-    font-size: 28px;
+    color:rgb(0, 0, 0); /* Change text color to black */
+    font-size: 40px;
 }
 
 #welcome p {
-    color: rgb(186, 62, 62); /* Change text color to white */
-    font-size: 18px;
+    color: rgb(0, 0, 0); /* Change text color to black */
+    font-size: 24px;
 }
 
 .btn {
@@ -76,6 +76,10 @@ main {
 .btn:hover {
     background-color: #272323;
 }
+#about-info{
+    transform: translateY(50%);
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -120,6 +124,7 @@ main {
     max-width: 100px; /* Adjust the maximum width as desired */
     margin: 0 auto;
     text-align: center;
+    
 }
 
 #video video {
@@ -130,6 +135,7 @@ main {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
 /* CSS for animations */
 @keyframes slidein {
     from {
@@ -142,6 +148,7 @@ main {
 
 .animation {
     animation: slidein 1s ease forwards; /* Apply animation to the element */
+    
 }
 #social {
     text-align: center;
@@ -170,10 +177,10 @@ main {
 /* Footer styles */
 footer {
     bottom: 0%;
-    background-color: #333;
+    background-color:#583838;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 30px 0;
     
    
 }
