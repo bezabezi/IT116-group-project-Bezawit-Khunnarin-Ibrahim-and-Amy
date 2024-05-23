@@ -1,8 +1,8 @@
 /* Background image for home page */
 body.home {
     background-image: url('b9.jpg'),    linear-gradient(to right, rgb(30 75 115/100%), rgb(255 255 255 / 0%));
-    background-size: contain;
-  
+    background-size: cover;
+    height: 1290px;
     background-repeat: no-repeat;
 
     font-family: Arial, sans-serif;
