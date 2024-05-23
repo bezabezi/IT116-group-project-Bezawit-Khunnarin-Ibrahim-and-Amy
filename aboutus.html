@@ -1,69 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Contact us</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Website</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
-    <!-- Linking external CSS stylesheet -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery library -->
     <style>
-   body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            background-color:#c48a8a;
-        }  
-main {
-    background-image: url('b3.jpg'); 
+       body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-image: url('b11.jpg');
+    height: 700px;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: 'pop';
+    src: url(./fonts/Poppins-Regular.ttf);
+}
+
+
+
+
+.about_section {
+    width: 100%;
     
-    background-position: center;
-    height: 650px;
+    background-size: cover;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    padding: 60px 10%;
+    font-family: 'pop';
 }
 
-.about-us {
-    background-color: rgba(249, 249, 249, 0.8);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+.about_img img {
+    width: 400px;
+    transform: translateY(40px);
+    margin-right: 40px; /* Adjust margin to move the details closer */
 }
 
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    height: 200px;
-    
+.about_details h1 {
+    font-size: 50px;
+    color: #fff;
+    position: relative;
 }
 
-.about-content {
-    text-align: center;
+.about_details h1::after {
+    content: " ";
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #e67e22;
+    border-radius: 5px;
+    left: 0;
+    bottom: -5px;
 }
 
-.about-content h2 {
-    font-size: 28px;
-    color: #f60101;
-}
-
-.about-content p {
+.about_details p {
     font-size: 16px;
-    line-height: 1.6;
+    color: #f1f1f1;
+    max-width: 500px;
+    margin: 25px 0 35px 0;
+    line-height: 28px;
+}
+
+.btn {
+    padding: 12px 30px;
+    border: 2px solid #e67e22;
+    border-radius: 5px;
+    color: #e67e22;
+    text-decoration: none;
+    margin: 25px 0;
+    transition: all .5s ease;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: #e67e22;
+    color: #222;
+}
+
+.btn1 {
+    margin-right: 15px;
+    background-color: #e67e22;
+    color: #000;
+}
+
+.btn1:hover {
+    background-color: transparent;
+    color: #e67e22;
 }
 
 #social {
     text-align: center;
     margin-top: 20px;
-    transform:translate(-400%,280%);
 }
 
 .social-icons {
     list-style-type: none;
-    
     padding: 0;
 }
 
@@ -73,64 +113,58 @@ main {
 }
 
 .social-icons li a {
-    color: rgb(253, 249, 249);
-    font-size: 24px;
+    color: rgb(255, 252, 252);
+    font-size: 26px;
     text-decoration: none;
 }
-footer {
-    position: relative;
-    z-index: 1; /* Ensure the footer appears above the header */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    color: white;
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
+footer{
+    padding: 15px;
 }
 
-         </style>
+    </style>
 </head>
 <body>
-    <!-- Header section -->
     <header>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="reservation.html">Reservation</a></li>
-                <li><a href="about us.html">About us</a></li>
+                <li><a href="aboutus.html">About us</a></li>
                 <li><a href="contactus.html">Contact us</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="about-us">
-            <div class="container">
-                <div class="about-content">
-                    <h2>About Us</h2>
-                    <p>Welcome to CABO restaurant, where we invite you to experience our vibrant flavors and deliciously rich 
-                        authentic Mexican dishes.Nestled in the heart of Cabo San Lucas, our restaurant offers an authentic taste of Mexico
-                        in every bite.<br>
-                        
-                        We take pride in offering all of our guests an exceptional dining experience, where every dish is crafted with love and care. From cheese melting Carne Asada quesadilla's to savory taco al pastor dipped in a flavorful and juicy consume, our menu features a wide array of traditional Mexican dishes, each bursting with flavor and authenticity.</p>
-                    
+    <section class="about_section" id="About">
+        <div class="about_img">
+            <img src="b4.jpg" alt="About Image">
+        </div>
+        <div class="about_details">
+            <h1>About us</h1>
+            <p>Welcome to CABO restaurant, where we invite you to experience our vibrant flavors and deliciously rich 
+                authentic Mexican dishes. Nestled in the heart of Cabo San Lucas, our restaurant offers an authentic taste of Mexico
+                in every bite. <br>
+                
+                We take pride in offering all of our guests an exceptional dining experience, where every dish is crafted with love and care. From cheese melting Carne Asada quesadilla's to savory taco al pastor dipped in a flavorful and juicy consume, our menu features a wide array of traditional Mexican dishes, each bursting with flavor and authenticity.</p>
+            
+            <div class="btns">
+                <a href="#" class="btn btn1">Read More</a>
+                <a href="reservation.html" class="btn btn2">Make A Reservation</a>
             </div>
-        </section>
-        
-    
+        </div>
+    </section>
     <section id="social">
         <div> 
             <ul class="social-icons">
-                <li><a href="https://twitter.com" target="_blank"><i class= "fab fa-twitter"></i></a></li>
-                <li><a href="https://instagram.com" target="_blank"><i class= "fab fa-instagram"></i></a></li>
-                <li><a href="https://facebook.com" target="_blank"><i class= "fab fa-facebook"></i></a></li>
-                <li><a href="https://whatsapp.com" target="_blank"><i class= "fab fa-whatsapp"></i></a></li>
+                <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
             </ul>
         </div>
     </section>
-</main>
-<footer>
-    <!-- Footer section -->
-    <p>&copy; 2024 CABO mexican restaurant. All rights reserved!</p>
-</footer>
+    <footer>
+        <p>&copy; 2024 CABO Mexican Restaurant. All rights reserved!</p>
+    </footer>
 </body>
 </html>

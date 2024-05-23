@@ -1,14 +1,16 @@
 /* Background image for home page */
 body.home {
-    background-image: url('b9.jpg');
-    background-size: cover;
+    background-image: url('b9.jpg'),    linear-gradient(to right, rgb(30 75 115/100%), rgb(255 255 255 / 0%));
+    background-size: contain;
+  
     background-repeat: no-repeat;
-    height: 1300px;
+
     font-family: Arial, sans-serif;
     font-size: 16px;
     margin: 0;
     padding: 0;
     background-color:  #c48a8a;
+    
 }
 
 /* Header styles */
@@ -37,6 +39,10 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+}
+header nav ul li a:hover {
+    background-color: #f39c12;
+    color: #333;
 }
 
 /* Main content styles */
@@ -177,7 +183,7 @@ main {
 /* Footer styles */
 footer {
     bottom: 0%;
-    background-color:#583838;
+    background-color:#080000;
     color: #fff;
     text-align: center;
     padding: 30px 0;
@@ -189,31 +195,19 @@ body.animation {
     font-size: 16px;
     margin: 0;
     padding: 0;
-    background-color:  #c48a8a;
+    background-color: #c48a8a;
 }
 
-.menu-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px 0;
-}
-.menu-item {
-    width: 20%; 
-    background-color: #fff;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+/* Header styles */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
 }
 
-
-.menu-item img {
-    width: 100%;
-    border-radius: 5px;
-    margin-bottom: 10px;
+header h1 {
+    font-size: 32px;
 }
-
 
 @media only screen and (max-width: 768px) {
     .menu-item {
