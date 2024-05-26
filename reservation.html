@@ -9,174 +9,203 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
-            background-image: url(b12.jpg);
-            margin: 0;
-            padding: 0;
-        }
+    font-family: 'Roboto', sans-serif;
+    background-image: url(b12.jpg);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
 
-        h1 {
-            font-size: 29px;
-            text-align: center;
-            font-weight: bold;
-            color: rgb(252, 253, 255);
-            transform: translateY(-10%);
-        }
+h1 {
+    font-size: 29px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(252, 253, 255);
+    transform: translateY(-10%);
+}
 
-        .reserve-form {
-            width: 100%;
-            max-width: 400px;
-            margin-top: 100px;
-            display: flex;
-            flex-direction: column;
-            font-weight: bold;
-            transform: translate(0%, -1%);
-            margin: 0 auto;
-            border-radius: 5px;
-            border: 1px solid #686e90;
-            padding: 20px;
-            background-color: #3d415e;
-        }
+.reserve-form {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    transform: translate(0%, -1%);
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 1px solid #686e90;
+    padding: 20px;
+    background-color: #3d415e;
+}
 
-        .reserve-form input[type="text"],
-        .reserve-form input[type="email"],
-        .reserve-form input[type="number"],
-        .reserve-form input[type="datetime-local"],
-        .reserve-form input[type="tel"],
-        .reserve-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            border: 1px solid #171926;
-            border-radius: 4px;
-            box-sizing: border-box;
-            background-color: #171926;
-        }
+.reserve-form input[type="text"],
+.reserve-form input[type="email"],
+.reserve-form input[type="number"],
+.reserve-form input[type="datetime-local"],
+.reserve-form input[type="tel"],
+.reserve-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #171926;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #171926;
+}
 
-        button {
-            background-color: #4caf50;
-            color: white;
-            cursor: pointer;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 4px;
-            width: 100%;
-            max-width: 100px;
-            transform: translateY(10%);
-        }
+button {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 100px;
+    transform: translateY(10%);
+}
 
-        #social {
-            text-align: center;
-            margin-top: 10px;
-            transform: translateY(10%);
-        }
+#social {
+    text-align: center;
+    margin-top: 10px;
+    transform: translateY(10%);
+}
 
-        .social-icons {
-            list-style-type: none;
-            padding: 0;
-        }
+.social-icons {
+    list-style-type: none;
+    padding: 0;
+}
 
-        .social-icons li {
-            display: inline-block;
-            margin-right: 10px;
-        }
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
 
-        .social-icons li a {
-            color: rgb(250, 249, 249);
-            font-size: 24px;
-            text-decoration: none;
-        }
+.social-icons li a {
+    color: rgb(250, 249, 249);
+    font-size: 24px;
+    text-decoration: none;
+}
 
-        footer {
-            bottom: 0%;
-            background-color: #080000;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
+footer {
+    bottom: 0%;
+    background-color: #080000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
 
-        h2 {
-            color: #fff;
-            text-align: center;
-            font-size: 12px;
-            letter-spacing: 10px;
-        }
+h2 {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 5px;
+}
 
-        #del-countdown {
-            position: fixed;
-            top: 70px;
-            left: 20px;
-            width: 250px;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
+#del-countdown {
+    position: fixed;
+    top: 70px;
+    left: 20px;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 
-        #clock span {
-            float: left;
-            text-align: center;
-            font-size: 14px;
-            margin: 0 2.5%;
-            color: #fff;
-            padding: 10px;
-            width: 25%;
-            border-radius: 20px;
-            box-sizing: border-box;
-        }
+#clock span {
+    float: left;
+    text-align: center;
+    font-size: 14px;
+    margin: 0 2.5%;
+    color: #fff;
+    padding: 10px;
+    width: 25%;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
 
-        #clock span:nth-child(1) {
-            background: #fa5559;
-        }
+#clock span:nth-child(1) {
+    background: #fa5559;
+}
 
-        #clock span:nth-child(2) {
-            background: #26c2b9;
-        }
+#clock span:nth-child(2) {
+    background: #26c2b9;
+}
 
-        #clock span:nth-child(3) {
-            background: #f6bc58;
-        }
+#clock span:nth-child(3) {
+    background: #f6bc58;
+}
 
-        #clock span:nth-child(4) {
-            background: #2dcb74;
-        }
+#clock span:nth-child(4) {
+    background: #2dcb74;
+}
 
-        #clock:after {
-            content: "";
-            display: block;
-            clear: both;
-        }
+#clock:after {
+    content: "";
+    display: block;
+    clear: both;
+}
 
-        #units span {
-            float: left;
-            width: 25%;
-            text-align: center;
-            margin-top: 10px;
-            color: #ddd;
-            text-transform: uppercase;
-            font-size: 12px;
-            letter-spacing: 2px;
-        }
+#units span {
+    float: left;
+    width: 25%;
+    text-align: center;
+    margin-top: 10px;
+    color: #ddd;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
 
-        span.turn {
-            animation: turn 0.7s ease forwards;
-        }
+span.turn {
+    animation: turn 0.7s ease forwards;
+}
 
-        @keyframes turn {
-            0% { transform: rotateX(0deg) }
-            100% { transform: rotateX(360deg) }
-        }
+@keyframes turn {
+    0% { transform: rotateX(0deg) }
+    100% { transform: rotateX(360deg) }
+}
 
-        #reservation-info {
-            display: none;
-            background-color: #3d415e;
-            color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            margin: 20px auto;
-            max-width: 400px;
-            text-align: center;
-        }
+#reservation-info {
+    display: none;
+    background-color: #3d415e;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 400px;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-size: cover;
+    }
+
+    .reserve-form {
+        width: 90%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        width: 100%;
+        max-width: none;
+        padding: 10px;
+    }
+
+    #del-countdown {
+        width: 90%;
+        left: 5%;
+        top: 20px;
+    }
+}
     </style>
 </head>
 <body>
