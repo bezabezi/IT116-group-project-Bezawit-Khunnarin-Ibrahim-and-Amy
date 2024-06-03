@@ -7,7 +7,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
-    <link rel ="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -51,54 +51,54 @@
             background-color: #171926;
         }
         button {
-    cursor: pointer;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 4px;
-    margin: 20px auto;
-    display: block;
-    text-align: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
+            cursor: pointer;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            margin: 20px auto;
+            display: block;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
 
-/* Form submit button styles */
-button[type="submit"] {
-    background-color: #4caf50;
-    color: white;
-    width: 100%;
-    max-width: 150px;
-}
+        /* Form submit button styles */
+        button[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            width: 100%;
+            max-width: 150px;
+        }
 
-button[type="submit"]:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-}
+        button[type="submit"]:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
 
-button[type="submit"]:active {
-    background-color: #3e8e41;
-    transform: scale(1);
-}
+        button[type="submit"]:active {
+            background-color: #3e8e41;
+            transform: scale(1);
+        }
 
-/* Reservation info button styles */
-#reserve,#party{
-    color:white;
-}
-#toggleButton {
-    background-color: #ff5722;
-    color: white;
-    width: 100%;
-    max-width: 150px;
-}
+        /* Reservation info button styles */
+        #reserve,#party{
+            color:white;
+        }
+        #toggleButton {
+            background-color: #ff5722;
+            color: white;
+            width: 100%;
+            max-width: 150px;
+        }
 
-#toggleButton:hover {
-    background-color: #e64a19;
-    transform: scale(1.05);
-}
+        #toggleButton:hover {
+            background-color: #e64a19;
+            transform: scale(1.05);
+        }
 
-#toggleButton:active {
-    background-color: #d84315;
-    transform: scale(1);
-}
+        #toggleButton:active {
+            background-color: #d84315;
+            transform: scale(1);
+        }
         #social {
             text-align: center;
             margin-top: 10px;
@@ -224,23 +224,23 @@ button[type="submit"]:active {
 <form action="https://postman-echo.com/post/" method="POST" class="reserve-form" id="reservation-form">
     <div>
         <label for="name">Name</label>
-        <input type="text" id="name" name="name">
+        <input type="text" id="name" name="name" required>
     </div>
     <div>
         <label for="party">Party Size</label>
-        <input type="number" id="party" name="party" min="1" max="7">
+        <input type="number" id="party" name="party" min="1" max="7" required>
     </div>
     <div>
         <label for="reserve">Date and Time</label>
-        <input type="datetime-local" id="reserve" name="reserve" min="11:00" max="23:00">
+        <input type="datetime-local" id="reserve" name="reserve" min="11:00" max="23:00" required>
     </div>
     <div>
         <label for="phonenumber">Phone Number</label>
-        <input type="tel" id="phonenumber" name="phonenumber">
+        <input type="tel" id="phonenumber" name="phonenumber" required>
     </div>
     <div>
         <label for="email">Email</label>
-        <input type="email" id="email" name="email">
+        <input type="email" id="email" name="email" required>
     </div>
     <button type="submit">Submit</button>
 </form>
@@ -320,23 +320,30 @@ button[type="submit"]:active {
     };
 
     // Form submission handling
-    
     document.getElementById("reservation-form").addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent default form submission
-        
+
         // Get form values
-        var name = document.getElementById("name").value;
-        var party = document.getElementById("party").value;
-        var datetime = document.getElementById("reserve").value;
+        var name = document.getElementById("name").value.trim();
+        var party = document.getElementById("party").value.trim();
+        var datetime = document.getElementById("reserve").value.trim();
+        var phone = document.getElementById("phonenumber").value.trim();
+        var email = document.getElementById("email").value.trim();
+
+        // Check if all required fields are filled
+        if (name === "" || party === "" || datetime === "" || phone === "" || email === "") {
+            alert("Please fill in all fields.");
+            return;
+        }
 
         // Format datetime to include a space between date and time
         var formattedDatetime = datetime.replace("T", " ");
-        
+
         // Display reservation info
         document.getElementById("info-name").textContent = "Name: " + name;
         document.getElementById("info-party").textContent = "Party Size: " + party;
         document.getElementById("info-datetime").textContent = "Date and Time: " + formattedDatetime;
-        
+
         // Show the reservation info section
         var reservationInfo = document.getElementById("reservation-info");
         reservationInfo.style.display = "block";
@@ -352,6 +359,9 @@ button[type="submit"]:active {
         console.log("Name: " + name);
         console.log("Party Size: " + party);
         console.log("Date and Time: " + formattedDatetime);
+
+        // Optionally, you can also proceed with form submission to the server if needed
+        // document.getElementById("reservation-form").submit();
     });
 
     // Function to toggle content visibility
