@@ -61,12 +61,12 @@ main {
 }
 
 #welcome h1 {
-    color:rgb(0, 0, 0); /* Change text color to black */
+    color: #ffffff ; /* Change text color to white */
     font-size: 40px;
 }
 
 #welcome p {
-    color: rgb(0, 0, 0); /* Change text color to black */
+    color: #ffffff; /* Change text color to white */
     font-size: 24px;
 }
 
