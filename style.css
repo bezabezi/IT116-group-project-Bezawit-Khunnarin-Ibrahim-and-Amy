@@ -232,7 +232,7 @@ header h1 {
     z-index: 1000; /* Ensure it's above other content */
     overflow: hidden;
     transition: transform 0.3s ease;
-    transform: translateY(230%);
+    transform: translateY(250%);
 }
 
 .open-hours:hover {
